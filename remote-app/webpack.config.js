@@ -29,6 +29,9 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./ChartComponent": "./src/ChartComponent",
+        "./LineChart": "./src/LineChart",
+        "./PieChart": "./src/PieChart",
+        "./AreaChart": "./src/AreaChart",
       },
       shared: {
         react: {
