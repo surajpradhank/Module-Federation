@@ -1,0 +1,127 @@
+# Node modules
+node_modules/
+
+# Build output
+/dist/
+/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+*.code-workspace
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.tgz
+
+# Exclude coverage
+coverage/
+
+# Exclude lock files (optional, if you use only one)
+# yarn.lock
+# package-lock.json
+
+# Exclude public build artifacts
+public/*.js
+public/*.map
+
+# Exclude test output
+*.test.js
+*.spec.js
+
+# Exclude temp files
+*.tmp
+*.swp
+
+# Exclude error logs
+error.log
+
+# Exclude other
+*.log
+
+# Exclude Windows system files
+Desktop.ini
+
+# Exclude Mac system files
+.AppleDouble
+.LSOverride
+
+# Exclude coverage reports
+coverage/
+
+# Exclude npm package
+*.tgz
+
+# Exclude lock files
+pnpm-lock.yaml
+
+# Exclude package manager folders
+.pnpm-store/
+
+# Exclude next.js build
+.next/
+
+# Exclude storybook build
+storybook-static/
+
+# Exclude jest cache
+.jest/
+
+# Exclude Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Exclude Svelte build
+.svelte-kit/
+
+# Exclude TypeScript build
+*.tsbuildinfo
+
+# Exclude parcel build
+.cache/
+.parcel-cache/
+
+# Exclude coverage
+coverage/
+
+# Exclude other temp files
+*.tmp
+*.temp
+
+# Exclude lock files
+*.lock
+
+# Exclude error logs
+*.error
+
+# Exclude test coverage
+*.lcov
+
+# Exclude test output
+*.out
+
+# Exclude test snapshots
+__snapshots__/
+
+# Exclude test coverage
+coverage/
+
+# Exclude test output
+*.out
+
+# Exclude test snapshots
+__snapshots__/
