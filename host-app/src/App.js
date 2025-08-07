@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import "./App.css";
-import LineChartSection from "./LineChartSection";
-import PieChartSection from "./PieChartSection";
-import AreaChartSection from "./AreaChartSection";
-const RemoteChart = React.lazy(() => import("remote/ChartComponent"));
+import DynamicRemoteComponent from "./DynamicRemoteComponent";
 
 function App() {
   const [activeTab, setActiveTab] = useState("chart");
@@ -38,14 +35,47 @@ function App() {
           <div className="section">
             <h2>Remote Chart Component</h2>
             <p>The chart below is loaded from the Remote application (port 3002) using Module Federation:</p>
-            <React.Suspense fallback={<div className="loading">Loading remote chart...</div>}>
-              <RemoteChart />
-            </React.Suspense>
+            <DynamicRemoteComponent
+              remoteUrl="http://localhost:3002/remoteEntry.js"
+              scope="remote"
+              module="./ChartComponent"
+              fallback={<div className="loading">Loading remote chart...</div>}
+            />
           </div>
         )}
-        {activeTab === "line" && <LineChartSection />}
-        {activeTab === "pie" && <PieChartSection />}
-        {activeTab === "area" && <AreaChartSection />}
+        {activeTab === "line" && (
+          <div className="section">
+            <h2>Remote Line Chart</h2>
+            <DynamicRemoteComponent
+              remoteUrl="http://localhost:3002/remoteEntry.js"
+              scope="remote"
+              module="./LineChart"
+              fallback={<div className="loading">Loading line chart...</div>}
+            />
+          </div>
+        )}
+        {activeTab === "pie" && (
+          <div className="section">
+            <h2>Remote Pie Chart</h2>
+            <DynamicRemoteComponent
+              remoteUrl="http://localhost:3002/remoteEntry.js"
+              scope="remote"
+              module="./PieChart"
+              fallback={<div className="loading">Loading pie chart...</div>}
+            />
+          </div>
+        )}
+        {activeTab === "area" && (
+          <div className="section">
+            <h2>Remote Area Chart</h2>
+            <DynamicRemoteComponent
+              remoteUrl="http://localhost:3002/remoteEntry.js"
+              scope="remote"
+              module="./AreaChart"
+              fallback={<div className="loading">Loading area chart...</div>}
+            />
+          </div>
+        )}
       </main>
     </div>
   );

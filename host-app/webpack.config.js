@@ -26,9 +26,6 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "host",
-      remotes: {
-        remote: "remote@http://localhost:3002/remoteEntry.js",
-      },
       shared: {
         react: {
           singleton: true,
